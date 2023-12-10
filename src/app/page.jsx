@@ -1,10 +1,5 @@
-import Link from 'components/shared/link';
+import PromoLanding from 'components/static/promo-landing';
 
-const Home = () => (
-  <div>
-    <h1>Pixel Point Next.js Tailwind Starter</h1>
-    <Link to="about">About</Link>
-  </div>
-);
+const Home = () => <PromoLanding />;
 
 export default Home;

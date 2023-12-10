@@ -1,4 +1,55 @@
-/* TODO: Import fonts. Please keep in mind we use only woff2 format! */
 @layer base {
-  /* Your code goes here... */
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../../public/fonts/Roboto/Roboto-Regular.woff2') format('woff2');
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../../public/fonts/Roboto/Roboto-Light.woff2') format('woff2');
+    font-weight: 300;
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../../public/fonts/Roboto/Roboto-Medium.woff2') format('woff2');
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../../public/fonts/Roboto/Roboto-Bold.woff2') format('woff2');
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    src: url('../../public/fonts/Poppins/Poppins-Regular.woff2') format('woff2');
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    src: url('../../public/fonts/Poppins/Poppins-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+  }
+
+  @font-face {
+    font-family: 'EditorialNew';
+    src: url('../../public/fonts/EditorialNew/EditorialNew-Regular.woff2') format('woff2');
+    font-weight: 400;
+  }
+}
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-editorial-new {
+  font-family: 'EditorialNew', sans-serif;
 }

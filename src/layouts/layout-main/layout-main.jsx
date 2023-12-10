@@ -1,22 +1,25 @@
+import dynamic from 'next/dynamic';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
-import Footer from 'components/shared/footer';
 import Header from 'components/shared/header';
-import MobileMenu from 'components/shared/mobile-menu';
 import SEO from 'components/shared/seo';
+
+import 'styles/main.css';
+
+const DynamicMobileMenu = dynamic(() => import('../../components/shared/mobile-menu'));
 
 const LayoutMain = ({ children }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const handleHeaderBurgerClick = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+  const handleHeaderBurgerClick = () => setIsMobileMenuOpen((prevState) => !prevState);
+
   return (
     <>
       <SEO />
       <Header isMobileMenuOpen={isMobileMenuOpen} onBurgerClick={handleHeaderBurgerClick} />
       <main>{children}</main>
-      <Footer />
-      <MobileMenu isOpen={isMobileMenuOpen} />
+      <DynamicMobileMenu isOpen={isMobileMenuOpen} />
     </>
   );
 };

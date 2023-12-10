@@ -4,8 +4,17 @@ module.exports = {
   experimental: {
     appDir: true,
   },
+  async rewrites() {
+    return {
+      fallback: [
+        {
+          source: '/api/:path*',
+          destination: `/api/:path*/`,
+        },
+      ],
+    };
+  },
   webpack(config) {
-    // https://github.com/vercel/next.js/issues/25950#issuecomment-863298702
     const fileLoaderRule = config.module.rules.find((rule) => {
       if (rule.test instanceof RegExp) {
         return rule.test.test('.svg');

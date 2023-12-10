@@ -1,17 +1,21 @@
 import PropTypes from 'prop-types';
 
 const defaultTitle = 'Pixel Point Next.js Tailwind Starter';
-const defaultDescription = 'Checkout our starter';
+const defaultDescription = 'Pixel Point, test, develop, verumiam, danil, grigoruk';
 
 const SEO = ({ title = defaultTitle, description = defaultDescription }) => (
   <>
     <title>{title}</title>
+    <meta name="author" content="Grigoruk Danil | @verumiam" />
     <meta name="description" content={description} key="desc" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content="https://example.com/images/cool-page.jpg" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    {/*  generate your favicons using the tool https://github.com/pixel-point/favpie */}
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+    />
+    <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" />
     <link rel="apple-touch-icon" sizes="48x48" href="/favicon/favicon-48x48.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="/favicon/favicon-72x72.png" />
